@@ -73,7 +73,7 @@
                 <td><?php echo $row['skill']; ?></td>
                 <td>
                     <a href="update.php?id=<?php echo urlencode($row['id']); ?>" class="btn btn-sm btn-edit">Edit</a>
-                    
+                    <a href="delete.php?id=<?php echo urlencode($row['id']); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this user?');">Delete</a>
                 </td>
             </tr>
             <?php } ?>

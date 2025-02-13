@@ -54,7 +54,14 @@ public function insert($query){
   return false;
   }
  }
-  
+  // Delete Query
+    public function delete($query) {
+        if ($this->link->query($query)) {
+            return true;
+        } else {
+            die("Delete Error: " . $this->link->error);
+        }
+    }
 
  
 }
